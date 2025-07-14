@@ -1,0 +1,5 @@
+data<-read.csv("2015.csv")
+View data
+data1<-data[which(data$CustomerID=="100"),names(data)%in%c("CustomerID","Age")]
+data2<-data[which(data$CustomerID=="50"),names(data)%in%c("CustomerID","Age")]
+boxplot(data1,data2)
